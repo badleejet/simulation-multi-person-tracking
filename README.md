@@ -63,13 +63,6 @@ pip install -r requirements.txt
 python new_senario_convlstm.py
 ```
 
-## パフォーマンス注記
-
-### Windows CPU最適化：
-- CPU最適化されたPyTorch操作を使用
-- メモリ管理のための設定可能なバッチサイズ
-- 長時間実行操作の進捗監視
-
 ## トラブルシューティング
 
 ### よくある問題：
@@ -78,19 +71,3 @@ python new_senario_convlstm.py
 2. **学習が遅い**: `window_size`を小さくするか、`num_epochs`を減らしてください。GPUがあれば切り替えてください
 3. **インポートエラー**: `pip install -r requirements.txt`で全依存関係がインストールされていることを確認してください
 
-## ライセンス
-
-MIT License - 詳細はLICENSEファイルを参照
-
-## 引用
-
-この研究でこのコードを使用する場合は、以下のように引用してください：
-
-```bibtex
-@misc{pedestrian-tracking-convlstm,
-  title={ConvLSTMを用いた歩行者追跡システム},
-  author={Your Name},
-  year={2024},
-  url={https://github.com/yourusername/pedestrian-tracking-convlstm}
-}
-```
