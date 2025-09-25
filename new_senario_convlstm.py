@@ -97,7 +97,7 @@ def setup_and_visualize_sensors():
     return SENSOR_POSITIONS
 
 class PersonMotion:
-    """歩行者の移動をシミュレートするクラス（元コード完全準拠）"""
+    """歩行者の移動をシミュレートするクラス"""
     def __init__(self, init_x, init_y, direction, speed):
         self.x = init_x
         self.y = init_y
@@ -121,7 +121,7 @@ class PersonMotion:
         return False     # まだエリア内にいる
 
 def generate_heatmap(sensor_positions, people_positions, grid_size=(GRID_WIDTH, GRID_HEIGHT)):
-    """ヒートマップを生成（元コード完全準拠）"""
+    """ヒートマップを生成"""
     heatmap = np.zeros(grid_size)
     
     # センサーの検知状態を計算
@@ -336,7 +336,7 @@ class ConvLSTM(nn.Module):
         return param
 
 
-# モデル定義（元コード完全準拠）
+# モデル定義
 class EnhancedMultiPersonCoordinatePredictor(nn.Module):
     def __init__(self, max_people=26, input_channels=1):
         super().__init__()
@@ -781,7 +781,7 @@ class SlidingWindowDataset(Dataset):
         return train_indices, val_indices, test_indices
 
 
-# 損失関数（元コード完全準拠）
+# 損失関数
 def custom_loss_with_threshold_schedule(pred_coords, pred_conf, true_coords, valid_counts, 
                                         prev_pred_coords=None, prev_matches=None,
                                         current_epoch=0, max_epochs=100):
@@ -1094,7 +1094,7 @@ def visualize_scenario_sample(dataset, sample_idx=0, timestep_interval=5):
             )
 
 
-# === メイン実行部（元コード完全準拠） ===
+# === メイン実行部 ===
 
 print("=== リファクタリング版 歩行者追跡システム ===")
 # 1. シナリオベースのデータセットを作成
